@@ -1,0 +1,36 @@
+{
+    "title": {
+        "home": "Inicio",
+        "about_us": "About us",
+        "contact_us": "Contact us",
+        "download": "Download",
+        "contacts": "Contacts",
+        "brand": "Tributo"
+    },
+    "general": {
+        "see_more": "Ver más"
+    },
+
+    "home": {
+        "i_want_to_know_more": "I want to know more",
+        "see_more_references_button": "See more references",
+        "instagram_news": "What's new in instragram",
+        "see_our_instagram": "Check our instagram"
+    },
+
+    "downloads": {
+        "download": "download",
+        "catalogue": "catalogue",
+        "browse": "browse"
+    },
+
+    "cookies": {
+        "notice": "Notice",
+        "use_cookies": "uses cookies to provide necessary website functionality, improve your experience and analyze our traffic. By using our website, you agree to our",
+        "privacy_policy": "Privacy Policy",
+        "cookies_policy": "Cookies Policy",
+        "and": "and",
+        "our": "our",
+        "accept": "Povolit"
+    }
+}
