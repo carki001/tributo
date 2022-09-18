@@ -58,5 +58,14 @@ class SettingSeeder extends Seeder
             'key' => 'header_text',
             'value' => 'Reina en mi espíritu una alegría admirable, muy parecida a las dulces alboradas.'
         ]);
+
+        DB::table('settings')->insert([
+            'key' => 'content_title',
+            'value' => 'Título ejemplo contenido'
+        ]);
+        DB::table('settings')->insert([
+            'key' => 'gallery_content_title',
+            'value' => 'Título ejemplo galería'
+        ]);
     }
 }

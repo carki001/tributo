@@ -21,6 +21,10 @@ class FrontendController extends Controller
         $headerDataRaw = Setting::where('key', 'LIKE', 'header_%')->get();
         $headerImage = Attachment::where('model_name', 'header-image')->first();
 
+        if ($headerImage) {
+            $headerImage->path = "/uploads/" . $headerImage->path;
+        }
+
         $generalData = $this->restructureSettings($generalDataRaw);
         $footerData = $this->restructureSettings($footerDataRaw);
         $headerData = $this->restructureSettings($headerDataRaw);

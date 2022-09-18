@@ -19,7 +19,7 @@
                                     v-model="section.title"
                                     :label="$t('sections.title')"
                                     autofocus
-                                    :rules="rules"
+                                    :rules="requiredRule"
                                 ></v-text-field>
                                 <v-text-field
                                     v-model="section.alias"
@@ -29,7 +29,7 @@
                                 <v-textarea
                                     v-model="section.description"
                                     :label="$t('sections.description')"
-                                    :rules="rulesTextLength"
+                                    :rules="textLengthRules"
                                 >
                                 </v-textarea>
                                 <v-text-field
@@ -48,6 +48,7 @@
                                     ref="attachFileInput"
                                     v-model="section.file"
                                     :label="$t('sections.main_image')"
+                                    :rules="requiredRule"
                                 ></v-file-input>
                             </v-col>
                         </v-row>
@@ -82,7 +83,7 @@ export default {
         return {
             valid: true,
             showEye: false,
-            rules: [(value) => !!value || this.$t("general.required")],
+            requiredRule: [(value) => !!value || this.$t("general.required")],
 
             numberRules: [
                 (value) =>
@@ -95,7 +96,7 @@ export default {
                     this.$t("general.position_too_large"),
             ],
 
-            rulesTextLength: [
+            textLengthRules: [
                 (value) => !!value || this.$t("general.required"),
                 (value) =>
                     /^.{0,500}$/.test(value) ||

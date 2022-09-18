@@ -43,7 +43,6 @@
             <div v-lazy-container="{ selector: 'img' }">
                 <img
                     :data-src="
-                        '/uploads/' +
                         pageData.headerImage.path +
                         '/' +
                         pageData.headerImage.name
@@ -102,6 +101,12 @@ export default {
                 .get("/getHomeData")
                 .then((response) => {
                     this.pageData = response.data;
+                    if (!response.data.headerImage) {
+                        this.pageData.headerImage = {
+                            path: "/images",
+                            name: "error.webp",
+                        };
+                    }
                     this.isPageDataLoaded = true;
                 })
                 .catch((error) => {
