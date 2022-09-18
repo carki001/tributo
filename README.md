@@ -6,7 +6,7 @@ To make it work you just need to do the following:
 
 -   Run composer install
 -   Run npm install
--   Run config .env
+-   Configure the .env file
 -   Run php artisan migrate
 -   Run php artisan db:seed --class=UserSeeder
 -   Run php artisan db:seed --class=SettingSeeder

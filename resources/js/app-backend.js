@@ -64,7 +64,6 @@ Vue.component("app-container", AppContainer);
 
 import Login from "./backend/views/Login.vue";
 import ResetPassword from "./backend/views/ResetPassword.vue";
-import Error404 from "./backend/views/Error404.vue";
 import AdminContainer from "./backend/views/AdminContainer.vue";
 import Users from "./backend/views/Users.vue";
 import Settings from "./backend/views/Settings.vue";
@@ -141,7 +140,6 @@ const routes = [
             }
         },
     },
-    { path: "*", name: "error404", component: Error404 },
 ];
 
 const router = new VueRouter({
