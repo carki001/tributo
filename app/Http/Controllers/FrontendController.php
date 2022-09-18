@@ -59,7 +59,6 @@ class FrontendController extends Controller
 
     public function getSectionDetails($alias)
     {
-        // gallery_content_title
         $aliasExploded = explode('-', $alias);
         $section_id = $aliasExploded[0];
         $section = Section::find($section_id);
